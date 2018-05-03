@@ -20,7 +20,7 @@
         android:paddingLeft="16dp">
 
         <TextView
-            android:id="@+id/budapestguide_text_view"
+            android:id="@+id/title_text_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -28,17 +28,17 @@
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            tools:text="egy" />
+            tools:text="Title" />
 
         <TextView
-            android:id="@+id/default_text_view"
+            android:id="@+id/description_text_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
-            tools:text="one" />
+            tools:text="Description" />
     </LinearLayout>
     <ImageView
         android:id="@+id/play_icon"

@@ -27,9 +27,6 @@ public class Guide {
     /** description for the place */
     private String mDescription;
 
-    /** website for the place */
-    private String mWebsite;
-
     /** Image resource ID for the place */
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
@@ -42,12 +39,10 @@ public class Guide {
      * @param title is the place in a language that the user is already familiar with
      *                           (such as English)
      * @param description is the place in the budapestguide language
-     * @param website is the resource ID for the audio file associated with this place
      */
-    public Guide(String title, String description, String website, String location) {
+    public Guide(String title, String description) {
         mTitle = title;
         mDescription = description;
-        mWebsite = website;
     }
 
     /**
@@ -56,13 +51,11 @@ public class Guide {
      * @param title is the place in a language that the user is already familiar with
      *                           (such as English)
      * @param description is the place in the budapestguide language
-     * @param website is the resource ID for the audio file associated with this place
      * @param imageResourceId is the resource ID for the audio file associated with this place
      */
-    public Guide(String title, String description, String website, int imageResourceId) {
+    public Guide(String title, String description, int imageResourceId) {
         mTitle = title;
         mDescription = description;
-        mWebsite = website;
         mImageResourceId = imageResourceId;
     }
 
@@ -78,13 +71,6 @@ public class Guide {
      */
     public String getDescription() {
         return mDescription;
-    }
-
-    /**
-     * Get the budapestguide translation of the place.
-     */
-    public String getWebsite() {
-        return mWebsite;
     }
 
     /**

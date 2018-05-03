@@ -59,17 +59,17 @@ public class GuideAdapter extends ArrayAdapter<Guide>  {
         // Get the {@link Guide} object located at this position in the list
         Guide currentGuide = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID budapestguide_text_view.
-        TextView budapestguideTextView = (TextView) listItemView.findViewById(R.id.budapestguide_text_view);
+        // Find the TextView in the list_item.xml layout with the ID title_text_view.
+        TextView TitleTextView = (TextView) listItemView.findViewById(R.id.title_text_view);
         // Get the budapestguide translation from the currentGuide object and set this text on
         // the budapestguide TextView.
-//        budapestguideTextView.setText(currentGuide.getbudapestguideTranslation());
+        TitleTextView.setText(currentGuide.getTitle());
 
-        // Find the TextView in the list_item.xml layout with the ID default_text_view.
-        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
+        // Find the TextView in the list_item.xml layout with the ID description_text_view.
+        TextView DescriptionTextView = (TextView) listItemView.findViewById(R.id.description_text_view);
         // Get the default translation from the currentGuide object and set this text on
         // the default TextView.
-//        defaultTextView.setText(currentGuide.getDefaultTranslation());
+        DescriptionTextView.setText(currentGuide.getDescription().substring(0,50)+"...");
 
         // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);

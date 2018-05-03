@@ -30,19 +30,7 @@ public class SightseeingFragment extends Fragment {
 
         // Create a list of guides
         final ArrayList<Guide> guides = new ArrayList<Guide>();
-//        guides.add(new Guide("red", "weṭeṭṭi", R.drawable.color_red, R.raw.color_red));
-//        guides.add(new Guide("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow,
-//                R.raw.color_mustard_yellow));
-//        guides.add(new Guide("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow,
-//                R.raw.color_dusty_yellow));
-//        guides.add(new Guide("green", "chokokki", R.drawable.color_green, R.raw.color_green));
-//        guides.add(new Guide("brown", "ṭakaakki", R.drawable.color_brown, R.raw.color_brown));
-//        guides.add(new Guide("gray", "ṭopoppi", R.drawable.color_gray, R.raw.color_gray));
-//        guides.add(new Guide("black", "kululli", R.drawable.color_black, R.raw.color_black));
-//        guides.add(new Guide("white", "kelelli", R.drawable.color_white, R.raw.color_white));
-
-        // Create an {@link GuideAdapter}, whose data source is a list of {@link Guide}s. The
-        // adapter knows how to create list items for each item in the list.
+        guides.add(new Guide("Margaret Island", "Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.",R.drawable.color_red));
         GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.category_colors);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
