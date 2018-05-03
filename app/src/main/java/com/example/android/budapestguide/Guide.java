@@ -16,86 +16,86 @@
 package com.example.android.budapestguide;
 
 /**
- * {@link Guide} represents a sight, hotel, restaurant or spa which can be visited by budapestists.
- * It contains a title, a description, a website, a location and an image for that word.
+ * {@link Guide} represents a sight, hotel, restaurant or spa which can be visited by tourists.
+ * It contains a title, a description, a website, a location and an image for that place.
  */
 public class Guide {
 
-    /** title for the word */
+    /** title for the place */
     private String mTitle;
 
-    /** description for the word */
+    /** description for the place */
     private String mDescription;
 
-    /** website for the word */
+    /** website for the place */
     private String mWebsite;
 
-    /** location for the word */
-    private String mLocation;
-
-    /** Image resource ID for the word */
+    /** Image resource ID for the place */
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
-    /** Constant value that represents no image was provided for this word */
+    /** Constant value that represents no image was provided for this place */
     private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
      * Create a new Guide object.
      *
-     * @param title is the word in a language that the user is already familiar with
+     * @param title is the place in a language that the user is already familiar with
      *                           (such as English)
-     * @param description is the word in the budapestguide language
-     * @param website is the resource ID for the audio file associated with this word
-     * @param location is the resource ID for the audio file associated with this word
+     * @param description is the place in the budapestguide language
+     * @param website is the resource ID for the audio file associated with this place
      */
     public Guide(String title, String description, String website, String location) {
         mTitle = title;
         mDescription = description;
         mWebsite = website;
-        mLocation = location;
     }
 
     /**
      * Create a new Guide object.
      *
-     * @param title is the word in a language that the user is already familiar with
+     * @param title is the place in a language that the user is already familiar with
      *                           (such as English)
-     * @param description is the word in the budapestguide language
-     * @param website is the resource ID for the audio file associated with this word
-     * @param location is the resource ID for the audio file associated with this word
-     * @param imageResourceId is the resource ID for the audio file associated with this word
+     * @param description is the place in the budapestguide language
+     * @param website is the resource ID for the audio file associated with this place
+     * @param imageResourceId is the resource ID for the audio file associated with this place
      */
-    public Guide(String title, String description, String website, String location, int imageResourceId) {
+    public Guide(String title, String description, String website, int imageResourceId) {
         mTitle = title;
         mDescription = description;
         mWebsite = website;
-        mLocation = location;
         mImageResourceId = imageResourceId;
     }
 
     /**
-     * Get the default translation of the word.
+     * Get the default translation of the place.
      */
     public String getTitle() {
         return mTitle;
     }
 
     /**
-     * Get the budapestguide translation of the word.
+     * Get the budapestguide translation of the place.
      */
     public String getDescription() {
         return mDescription;
     }
 
     /**
-     * Return the image resource ID of the word.
+     * Get the budapestguide translation of the place.
+     */
+    public String getWebsite() {
+        return mWebsite;
+    }
+
+    /**
+     * Return the image resource ID of the place.
      */
     public int getImageResourceId() {
         return mImageResourceId;
     }
 
     /**
-     * Returns whether or not there is an image for this word.
+     * Returns whether or not there is an image for this place.
      */
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;

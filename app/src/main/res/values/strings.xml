@@ -14,7 +14,7 @@
 -->
 <resources>
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">budapest Guide</string>
+    <string name="app_name">Budapest Guide</string>
 
     <!-- Category name for phrases [CHAR LIMIT=20] -->
     <string name="category_hotel">Hotel</string>
