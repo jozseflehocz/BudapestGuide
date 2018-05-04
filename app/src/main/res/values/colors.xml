@@ -21,7 +21,7 @@
     <color name="primary_dark_color">#2F1D1A</color>
 
     <!-- Background color for app -->
-    <color name="tan_background">#FFF7DA</color>
+    <color name="tan_background">#FFFFFF</color>
 
     <!-- Background color for the numbers category -->
     <color name="category_numbers">#FD8E09</color>
@@ -34,4 +34,19 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>
+
+    <!--green color of the flag of Budapest -->
+    <color name="flag_red">#D12631</color>
+
+    <!--red color of the flag of Budapest -->
+    <color name="flag_green">#436F4D</color>
+
+    <!--light yellow of the coat of arms of Budapest -->
+    <color name="coa_light_yellow">#F9E098</color>
+
+    <!--dark yellow of the coat of arms of Budapest -->
+    <color name="coa_dark_yellow">#BE9C32</color>
+
+    <!--blue of the coat of arms of Budapest -->
+    <color name="coa_blue">#0F6496</color>
 </resources>

@@ -30,7 +30,7 @@ public class SightseeingFragment extends Fragment {
 
         // Create a list of guides
         final ArrayList<Guide> guides = new ArrayList<Guide>();
-        guides.add(new Guide("Margaret Island", "Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.",R.drawable.color_red));
+        guides.add(new Guide("Margaret Island", "Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.",R.drawable.margaretisland));
         GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.category_colors);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
