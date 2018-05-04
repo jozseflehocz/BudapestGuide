@@ -27,5 +27,6 @@
 
     <!-- Category name for the vocabulary guides for sightseeing [CHAR LIMIT=20] -->
     <string name="category_spa">Spa</string>
+    <string name="item_details">Item Details</string>
 
 </resources>

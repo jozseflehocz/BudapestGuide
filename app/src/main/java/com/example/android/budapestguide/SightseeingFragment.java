@@ -1,8 +1,11 @@
 package com.example.android.budapestguide;
 
 
+import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +20,13 @@ import java.util.ArrayList;
 public class SightseeingFragment extends Fragment {
 
 
+
+
     public SightseeingFragment() {
         // Required empty public constructor
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,7 +38,7 @@ public class SightseeingFragment extends Fragment {
         // Create a list of guides
         final ArrayList<Guide> guides = new ArrayList<Guide>();
         guides.add(new Guide("Margaret Island", "Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.",R.drawable.margaretisland));
-        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.category_colors);
+        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.flag_green);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -50,6 +57,18 @@ public class SightseeingFragment extends Fragment {
 
                 // Get the {@link Guide} object at the given position the user clicked on
                 Guide guide = guides.get(position);
+
+                Intent itemDetailsIntent = new Intent(getActivity(), ItemDetails.class);
+
+                /**
+                 * https://stackoverflow.com/questions/2405120/how-to-start-an-intent-by-passing-some-parameters-to-it
+                 * adding track info as parameters to the intent
+                 */
+                itemDetailsIntent.putExtra("title",guide.getTitle());
+                itemDetailsIntent.putExtra("description",guide.getDescription());
+                itemDetailsIntent.putExtra("coverImgId",guide.getImageResourceId());
+                startActivity(itemDetailsIntent);
+
 
 
             }
