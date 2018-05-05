@@ -26,8 +26,7 @@
             android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
+            style="@style/TitleStyle"
             tools:text="Title" />
 
         <TextView
@@ -36,8 +35,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="top"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
+            style="@style/DescriptionStyle"
             tools:text="Description" />
     </LinearLayout>
     <ImageView

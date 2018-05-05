@@ -33,12 +33,17 @@ public class SightseeingFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.word_list, container, false);
 
-
-
         // Create a list of guides
         final ArrayList<Guide> guides = new ArrayList<Guide>();
         guides.add(new Guide("Margaret Island", "Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.",R.drawable.margaretisland));
-        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.flag_green);
+        guides.add(new Guide("Kobanya cellar system", "The Kőbánya cellar system or cellar system of Kőbánya (IPA: [ˈkøːbaːɲɒ]; in Hungarian: kőbányai pincerendszer, \"cellar system of Kőbánya\", or kőbányai alagútrendszer, \"tunnel system of Kőbánya\"), sometimes known to non-Hungarians simply as the Kőbánya Mine, or the Kobanya Mine, is an extensive network of subterranea, or underground spaces, in the 10th district of Budapest (Kőbánya), in Hungary.",R.drawable.kobanyastonemine));
+        guides.add(new Guide("Hospital in the Rock Nuclear Bunker Museum", "The history of the emergency hospital goes back to World War II, when Castle District was part of the Government Quarter. The caves and tunnels were connected and fortified and used as an air raid shelter. On the orders of the Mayor of Budapest an emergency surgical hospital was also built within the caves beneath Buda Castle Hill. The hospital was actively used during WW II until July 1945 and then during the 1956 Revolution to treat wounded civilians and soldiers.",R.drawable.szikla_korhaz3__big));
+        guides.add(new Guide("Hungarian Railway Museum", "The foundation-stone of the Hungarian Railway Museum was laid on 22 November 1999, on the site of the former Budapest North Depot of the Hungarian State Railways (MÁV). The first phase of the project was completed in less than eight months, funded by the Ministry of Transport and Waterways, MÁV and MÁV Nosztalgia Ltd, the heritage division of MÁV. After many months of effort, Europe's first interactive railway museum opened on 14 July 2000, displaying over a hundred railway vehicles and equipment of varying ages on a site of over 70,000 m2.",R.drawable.vasuttorteneti_park_program));
+        guides.add(new Guide("City Park", "The City Park (Hungarian: Városliget; German: Stadtwäldchen) is a public park close to the centre of Budapest, Hungary. It is a 0.9-by-0.6-mile (1,400 by 970 m) rectangle, with an area of 302 acres (1.2 km2),[1] located in District XIV of Budapest. Its main entrance is at Heroes' Square (Hősök tere), one of Hungary's World Heritage sites.",R.drawable.citypark));
+        guides.add(new Guide("Margaret Island", "Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.",R.drawable.margaretisland));
+        guides.add(new Guide("Margaret Island", "Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.",R.drawable.margaretisland));
+
+        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.tan_background);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -66,7 +71,7 @@ public class SightseeingFragment extends Fragment {
                  */
                 itemDetailsIntent.putExtra("title",guide.getTitle());
                 itemDetailsIntent.putExtra("description",guide.getDescription());
-                itemDetailsIntent.putExtra("coverImgId",guide.getImageResourceId());
+                itemDetailsIntent.putExtra("detailImgId",guide.getImageResourceId());
                 startActivity(itemDetailsIntent);
 
 
