@@ -1,6 +1,7 @@
 package com.example.android.budapestguide;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,29 +28,13 @@ public class SpaFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.word_list, container, false);
 
-
-
         // Create a list of guides
         final ArrayList<Guide> guides = new ArrayList<Guide>();
-//        guides.add(new Guide("father", "әpә", R.drawable.family_father, R.raw.family_father));
-//        guides.add(new Guide("mother", "әṭa", R.drawable.family_mother, R.raw.family_mother));
-//        guides.add(new Guide("son", "angsi", R.drawable.family_son, R.raw.family_son));
-//        guides.add(new Guide("daughter", "tune", R.drawable.family_daughter, R.raw.family_daughter));
-//        guides.add(new Guide("older brother", "taachi", R.drawable.family_older_brother,
-//                R.raw.family_older_brother));
-//        guides.add(new Guide("younger brother", "chalitti", R.drawable.family_younger_brother,
-//                R.raw.family_younger_brother));
-//        guides.add(new Guide("older sister", "teṭe", R.drawable.family_older_sister,
-//                R.raw.family_older_sister));
-//        guides.add(new Guide("younger sister", "kolliti", R.drawable.family_younger_sister,
-//                R.raw.family_younger_sister));
-//        guides.add(new Guide("grandmother ", "ama", R.drawable.family_grandmother,
-//                R.raw.family_grandmother));
-//        guides.add(new Guide("grandfather", "paapa", R.drawable.family_grandfather,                R.raw.family_grandfather));
+        guides.add(new Guide("Margaret Island", "Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.",R.drawable.margaretisland));
+        guides.add(new Guide("Kobanya cellar system", "The Kőbánya cellar system or cellar system of Kőbánya (IPA: [ˈkøːbaːɲɒ]; in Hungarian: kőbányai pincerendszer, \"cellar system of Kőbánya\", or kőbányai alagútrendszer, \"tunnel system of Kőbánya\"), sometimes known to non-Hungarians simply as the Kőbánya Mine, or the Kobanya Mine, is an extensive network of subterranea, or underground spaces, in the 10th district of Budapest (Kőbánya), in Hungary.",R.drawable.kobanyastonemine));
+        guides.add(new Guide("Hospital in the Rock Nuclear Bunker Museum", "The history of the emergency hospital goes back to World War II, when Castle District was part of the Government Quarter. The caves and tunnels were connected and fortified and used as an air raid shelter. On the orders of the Mayor of Budapest an emergency surgical hospital was also built within the caves beneath Buda Castle Hill. The hospital was actively used during WW II until July 1945 and then during the 1956 Revolution to treat wounded civilians and soldiers.",R.drawable.szikla_korhaz3__big));
 
-        // Create an {@link GuideAdapter}, whose data source is a list of {@link Guide}s. The
-        // adapter knows how to create list items for each item in the list.
-        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.category_family);
+        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.tan_background);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -69,14 +54,22 @@ public class SpaFragment extends Fragment {
                 // Get the {@link Guide} object at the given position the user clicked on
                 Guide guide = guides.get(position);
 
+                Intent itemDetailsIntent = new Intent(getActivity(), ItemDetails.class);
+
+                /**
+                 * https://stackoverflow.com/questions/2405120/how-to-start-an-intent-by-passing-some-parameters-to-it
+                 * adding track info as parameters to the intent
+                 */
+                itemDetailsIntent.putExtra("title",guide.getTitle());
+                itemDetailsIntent.putExtra("description",guide.getDescription());
+                itemDetailsIntent.putExtra("detailImgId",guide.getImageResourceId());
+                startActivity(itemDetailsIntent);
+
+
 
             }
         });
 
         return rootView;
     }
-
-
-
-
 }

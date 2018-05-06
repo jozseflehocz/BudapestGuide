@@ -1,6 +1,7 @@
 package com.example.android.budapestguide;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,8 +17,6 @@ import java.util.ArrayList;
  */
 public class HotelFragment extends Fragment {
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -25,22 +24,17 @@ public class HotelFragment extends Fragment {
 
         // Create a list of guides
         final ArrayList<Guide> guides = new ArrayList<Guide>();
-//        guides.add(new Guide("Where are you going?", "minto wuksus",
-//                R.raw.phrase_where_are_you_going));
-//        guides.add(new Guide("What is your name?", "tinnә oyaase'nә",
-//                R.raw.phrase_what_is_your_name));
-//        guides.add(new Guide("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
-//        guides.add(new Guide("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
-//        guides.add(new Guide("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
-//        guides.add(new Guide("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
-//        guides.add(new Guide("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
-//        guides.add(new Guide("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
-//        guides.add(new Guide("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
-//        guides.add(new Guide("Come here.", "әnni'nem", R.raw.phrase_come_here));
+        guides.add(new Guide("L & A", "Located 600 m from Hungarian State Opera House, Apartment L&A offers accommodations in Budapest. Apartment L&A features views of the city and is 2.1 km from Széchenyi Thermal Bath.\n" +
+                "\n" +
+                "A dishwasher and an oven are provided in the kitchen and there is a private bathroom with bathrobes and slippers. A flat-screen TV with satellite channels and DVD player is provided.", R.drawable.landa));
+        guides.add(new Guide("Broadway Residence", "Featuring free WiFi and air-conditioning, Broadway Residence is located in Budapest, just 452 m from Hungarian State Opera House. Keleti Railway Station is 2.3 km away.\n" +
+                "\n" +
+                "The accommodation is fitted with a satellite flat-screen TV. Some units have a seating and/or dining area. There is also a kitchen, equipped with a dishwasher and oven. A microwave and toaster are also featured, as well as a coffee machine. There is a private bathroom with free toiletries in each unit. Bed linen are available.", R.drawable.broadwayresidence));
+        guides.add(new Guide("Parliament Corner Apartment", "This property is 1 minute walk from the beach. Parliament Corner Apartment offers accommodations in Budapest, 1.1 km from Hungarian State Opera House and 2.9 km from Keleti Railway Station.\n" +
+                "\n" +
+                "The kitchen is fitted with a dishwasher and an oven and there is a private bathroom with slippers, free toiletries and a hair dryer. A flat-screen TV with satellite channels is provided.", R.drawable.parlaimentcornerapartment));
 
-        // Create an {@link GuideAdapter}, whose data source is a list of {@link Guide}s. The
-        // adapter knows how to create list items for each item in the list.
-        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.category_phrases);
+        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.tan_background);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -60,9 +54,22 @@ public class HotelFragment extends Fragment {
                 // Get the {@link Guide} object at the given position the user clicked on
                 Guide guide = guides.get(position);
 
+                Intent itemDetailsIntent = new Intent(getActivity(), ItemDetails.class);
+
+                /**
+                 * https://stackoverflow.com/questions/2405120/how-to-start-an-intent-by-passing-some-parameters-to-it
+                 * adding track info as parameters to the intent
+                 */
+                itemDetailsIntent.putExtra("title", guide.getTitle());
+                itemDetailsIntent.putExtra("description", guide.getDescription());
+                itemDetailsIntent.putExtra("detailImgId", guide.getImageResourceId());
+                startActivity(itemDetailsIntent);
+
+
             }
         });
 
         return rootView;
     }
+
 }
