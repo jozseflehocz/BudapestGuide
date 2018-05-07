@@ -65,6 +65,20 @@ public class GuideAdapter extends ArrayAdapter<Guide>  {
         // the budapestguide TextView.
         TitleTextView.setText(currentGuide.getTitle());
 
+        // Find the ImageView in the list_item.xml layout with the ID image.
+        TextView phoneView = (TextView) listItemView.findViewById(R.id.phone_text_view);
+        // Check if an image is provided for this word or not
+        if (currentGuide.hasPhone()) {
+            // If an image is available, display the provided image based on the resource ID
+            phoneView.setText(currentGuide.getPhone());
+            // Make sure the view is visible
+            phoneView.setVisibility(View.VISIBLE);
+        } else {
+            // Otherwise hide the ImageView (set visibility to GONE)
+            phoneView.setVisibility(View.GONE);
+        }
+
+
         // Find the TextView in the list_item.xml layout with the ID description_text_view.
         TextView DescriptionTextView = (TextView) listItemView.findViewById(R.id.description_text_view);
         // Get the default translation from the currentGuide object and set this text on

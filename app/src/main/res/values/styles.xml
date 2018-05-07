@@ -40,8 +40,51 @@
         <item name="android:textColor">@color/coa_light_yellow</item>
     </style>
 
+    <style name="ListItemImgStyle">
+         <item name="android:padding">@dimen/list_item_layout_padding</item>
+        <item name="android:layout_width">@dimen/list_item_height</item>
+        <item name="android:layout_height">@dimen/list_item_height</item>
+    </style>
+
+    <style name="detailImgStyle">
+        <item name="android:padding">@dimen/layout_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="detailTitleStyle">
+        <item name="android:textColor">@color/flag_green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:paddingRight">@dimen/layout_padding</item>
+        <item name="android:paddingBottom">@dimen/layout_padding</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="detailPhoneStyle">
+        <item name="android:textColor">@color/coa_dark_yellow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:paddingRight">@dimen/layout_padding</item>
+        <item name="android:paddingBottom">@dimen/layout_padding</item>
+    </style>
+
+    <style name="detailDescriptionStyle">
+        <item name="android:textColor">@color/coa_blue</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:paddingLeft">@dimen/layout_padding</item>
+        <item name="android:paddingRight">@dimen/layout_padding</item>
+    </style>
+
     <style name="TitleStyle">
         <item name="android:textColor">@color/flag_green</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PhoneStyle">
+        <item name="android:textColor">@color/coa_dark_yellow</item>
         <item name="android:textStyle">bold</item>
     </style>
 

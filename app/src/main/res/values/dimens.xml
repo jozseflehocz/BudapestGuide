@@ -3,4 +3,5 @@
     <dimen name="list_item_height">88dp</dimen>
     <dimen name="play_icon_size">24dp</dimen>
     <dimen name="layout_padding">16dp</dimen>
+    <dimen name="list_item_layout_padding">8dp</dimen>
 </resources>

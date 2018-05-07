@@ -63,6 +63,7 @@ public class HotelFragment extends Fragment {
                 itemDetailsIntent.putExtra("title", guide.getTitle());
                 itemDetailsIntent.putExtra("description", guide.getDescription());
                 itemDetailsIntent.putExtra("detailImgId", guide.getImageResourceId());
+                itemDetailsIntent.putExtra("phone", guide.getPhone());
                 startActivity(itemDetailsIntent);
 
 

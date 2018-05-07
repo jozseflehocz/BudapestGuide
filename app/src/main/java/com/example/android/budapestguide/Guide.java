@@ -15,9 +15,11 @@
  */
 package com.example.android.budapestguide;
 
+import android.content.res.Resources;
+
 /**
  * {@link Guide} represents a sight, hotel, restaurant or spa which can be visited by tourists.
- * It contains a title, a description, a website, a location and an image for that place.
+ * It contains a title, a description, a phone and an image for that place.
  */
 public class Guide {
 
@@ -33,12 +35,17 @@ public class Guide {
     /** Constant value that represents no image was provided for this place */
     private static final int NO_IMAGE_PROVIDED = -1;
 
+    /** Constant value that represents no phone was provided for this place */
+    private static final String NO_PHONE_PROVIDED = "";
+
+    /** Image resource ID for the place */
+    private String mPhone = NO_PHONE_PROVIDED;
+
     /**
      * Create a new Guide object.
      *
-     * @param title is the place in a language that the user is already familiar with
-     *                           (such as English)
-     * @param description is the place in the budapestguide language
+     * @param title for the place
+     * @param description is the description for the place
      */
     public Guide(String title, String description) {
         mTitle = title;
@@ -48,15 +55,29 @@ public class Guide {
     /**
      * Create a new Guide object.
      *
-     * @param title is the place in a language that the user is already familiar with
-     *                           (such as English)
-     * @param description is the place in the budapestguide language
-     * @param imageResourceId is the resource ID for the audio file associated with this place
+     * @param title is title for the place
+     * @param description is the description of the place
+     * @param imageResourceId is the resource ID for the place
      */
     public Guide(String title, String description, int imageResourceId) {
         mTitle = title;
         mDescription = description;
         mImageResourceId = imageResourceId;
+    }
+
+    /**
+     * Create a new Guide object.
+     *
+     * @param title is title for the place
+     * @param description is the description of the place     *
+     * @param phone is the phone for the place
+     * @param imageResourceId is the resource ID for the audio file associated with this place
+     */
+    public Guide(String title, String description,String phone, int imageResourceId) {
+        mTitle = title;
+        mDescription = description;
+        mImageResourceId = imageResourceId;
+        mPhone=phone;
     }
 
     /**
@@ -67,7 +88,7 @@ public class Guide {
     }
 
     /**
-     * Get the budapestguide translation of the place.
+     * Get the description of the place.
      */
     public String getDescription() {
         return mDescription;
@@ -85,6 +106,20 @@ public class Guide {
      */
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
+
+    /**
+     * Get the phone number for the place.
+     */
+    public String getPhone() {
+        return mPhone;
+    }
+
+    /**
+     * Returns whether or not there is phone for this place.
+     */
+    public boolean hasPhone() {
+        return mPhone != NO_PHONE_PROVIDED;
     }
 
 }

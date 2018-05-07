@@ -37,6 +37,7 @@ public class ItemDetails extends AppCompatActivity {
         String title = thisIntent.getStringExtra("title");
         String description= thisIntent.getStringExtra("description");
         int detailImgId=thisIntent.getIntExtra("detailImgId",R.drawable.margaretisland);
+        String phone= thisIntent.getStringExtra("phone");
 
         //replace android label "Now playing" to the title of the track
         setTitle(title);
@@ -52,6 +53,19 @@ public class ItemDetails extends AppCompatActivity {
 //        // Get the album name from the current track object and
 //        // set this text on the albumTextView
         descriptionTextView.setText(description);
+
+        // Find the ImageView in the list_item.xml layout with the ID image.
+        TextView phoneView = (TextView) findViewById(R.id.phone_text_view);
+        // Check if an image is provided for this word or not
+        if (phone.length()>0) {
+            // If an image is available, display the provided image based on the resource ID
+            phoneView.setText(phone);
+            // Make sure the view is visible
+            phoneView.setVisibility(View.VISIBLE);
+        } else {
+            // Otherwise hide the ImageView (set visibility to GONE)
+            phoneView.setVisibility(View.GONE);
+        }
 
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon

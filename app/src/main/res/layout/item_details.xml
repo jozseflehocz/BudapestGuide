@@ -7,26 +7,33 @@
     android:orientation="vertical"
     android:padding="@dimen/layout_padding">
 
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        tools:src="@mipmap/ic_launcher" />
 
-    <TextView
-        android:id="@+id/title_text_view"
-        style="@style/TitleStyle"
+        <ImageView
+            android:id="@+id/image_view"
+            style="@style/detailImgStyle"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            style="@style/detailTitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/phone_text_view"
+            style="@style/detailPhoneStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Phone" />
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Title" />
-
-    <TextView
-        android:id="@+id/description_text_view"
-        style="@style/DescriptionStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Details" />
-
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/description_text_view"
+            style="@style/detailDescriptionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Details" />
+    </ScrollView>
 </LinearLayout>

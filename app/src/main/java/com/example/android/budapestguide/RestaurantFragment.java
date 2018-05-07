@@ -29,9 +29,9 @@ public class RestaurantFragment extends Fragment {
 
         // Create a list of guides
         final ArrayList<Guide> guides = new ArrayList<Guide>();
-        guides.add(new Guide("Aranyhal", "In addition to the traditional pastries of Hungarian cuisine, we offer a wide range of regional specialties. We offer varied, different flavors and rich menus every week.", R.drawable.aranyhal));
-        guides.add(new Guide("Belvarosi Disznotoros", "We believe that good food can only be made from good ingredients, therefore their quality is our first priority – be it the frying oil, the meat or the fresh vegetables. It is important for us that our guests leave satisfied and even more important, that they choose us again. We review our restaurants’ permanent menu regularly and improve the recipes, so we can ensure good taste and freshness.", R.drawable.belvarosidisznotoros));
-        guides.add(new Guide("Gundel Etterem", "The name Gundel could rightly stand for the history of modern Hungarian gastronomy and hospitality. Discover the country by its unique taste of food invented by a Bavarian born genius Károly Gundel who tamed the Hungarian cuisine. Gundel is the restaurant where you can find traditional dishes based on original recipes, served in an exceptional ambiance.", R.drawable.gundeletterem));
+        guides.add(new Guide("Aranyhal Vendeglo", "In addition to the traditional pastries of Hungarian cuisine, we offer a wide range of regional specialties. We offer varied, different flavors and rich menus every week.","0036(70)338-8086", R.drawable.aranyhal));
+        guides.add(new Guide("Belvarosi Disznotoros", "We believe that good food can only be made from good ingredients, therefore their quality is our first priority – be it the frying oil, the meat or the fresh vegetables. It is important for us that our guests leave satisfied and even more important, that they choose us again. We review our restaurants’ permanent menu regularly and improve the recipes, so we can ensure good taste and freshness.", "0036(70)602-2775",R.drawable.belvarosidisznotoros));
+        guides.add(new Guide("Gundel Etterem", "The name Gundel could rightly stand for the history of modern Hungarian gastronomy and hospitality. Discover the country by its unique taste of food invented by a Bavarian born genius Károly Gundel who tamed the Hungarian cuisine. Gundel is the restaurant where you can find traditional dishes based on original recipes, served in an exceptional ambiance.", "0036(1)889-8100",R.drawable.gundeletterem));
 
         GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.tan_background);
 
@@ -62,6 +62,7 @@ public class RestaurantFragment extends Fragment {
                 itemDetailsIntent.putExtra("title", guide.getTitle());
                 itemDetailsIntent.putExtra("description", guide.getDescription());
                 itemDetailsIntent.putExtra("detailImgId", guide.getImageResourceId());
+                itemDetailsIntent.putExtra("phone", guide.getPhone());
                 startActivity(itemDetailsIntent);
 
 
