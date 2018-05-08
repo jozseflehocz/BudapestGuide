@@ -8,3 +8,7 @@ Tested
 
 - Xiaomi Redmi Note 4 (Android 7.0 API 24)
 - Virtual Device Nexus 5X API 27 2 (Android 8.1.0 API 27)
+
+Screenshots
+--------------
+https://github.com/jozseflehocz/BudapestGuide/wiki
