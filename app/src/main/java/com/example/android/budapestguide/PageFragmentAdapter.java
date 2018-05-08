@@ -7,8 +7,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class PageFragmentAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 4;
-    private String tabTitles[] = new String[] { "Restaurant", "Sightseeing", "Spa","Hotel" };
     private Context context;
+    private String tabTitles[] = new String[] { context.getString(R.string.category_restaurant), context.getString(R.string.category_sightseeing), context.getString(R.string.category_spa), context.getString(R.string.category_hotel) };
 
     public PageFragmentAdapter(FragmentManager fm, Context context) {
         super(fm);

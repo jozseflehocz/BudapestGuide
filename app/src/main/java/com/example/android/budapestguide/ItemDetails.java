@@ -17,10 +17,10 @@ public class ItemDetails extends AppCompatActivity {
     public void onBackPressed(){
         FragmentManager fm = getFragmentManager();
         if (fm.getBackStackEntryCount() > 0) {
-            Log.i("ItemDetails", "popping backstack");
+            //Log.i("ItemDetails", "popping backstack");
             fm.popBackStack();
         } else {
-            Log.i("ItemDetails", "nothing on backstack, calling super");
+            //Log.i("ItemDetails", "nothing on backstack, calling super");
             super.onBackPressed();
         }
     }
@@ -54,11 +54,11 @@ public class ItemDetails extends AppCompatActivity {
 //        // set this text on the albumTextView
         descriptionTextView.setText(description);
 
-        // Find the ImageView in the list_item.xml layout with the ID image.
+        // Find the phoneView in the list_item.xml layout.
         TextView phoneView = (TextView) findViewById(R.id.phone_text_view);
-        // Check if an image is provided for this word or not
+        // Check if a phone is provided for this word or not
         if (phone.length()>0) {
-            // If an image is available, display the provided image based on the resource ID
+            // If an phone is available, display the phone numver
             phoneView.setText(phone);
             // Make sure the view is visible
             phoneView.setVisibility(View.VISIBLE);
@@ -66,7 +66,6 @@ public class ItemDetails extends AppCompatActivity {
             // Otherwise hide the ImageView (set visibility to GONE)
             phoneView.setVisibility(View.GONE);
         }
-
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView coverView = (ImageView) findViewById(R.id.image_view);

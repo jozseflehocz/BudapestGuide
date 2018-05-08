@@ -61,15 +61,15 @@ public class GuideAdapter extends ArrayAdapter<Guide>  {
 
         // Find the TextView in the list_item.xml layout with the ID title_text_view.
         TextView TitleTextView = (TextView) listItemView.findViewById(R.id.title_text_view);
-        // Get the budapestguide translation from the currentGuide object and set this text on
-        // the budapestguide TextView.
+        // Get the title the currentGuide object and set this text on
+        // the title TextView.
         TitleTextView.setText(currentGuide.getTitle());
 
-        // Find the ImageView in the list_item.xml layout with the ID image.
+        // Find the phone text view in the list_item.xml layout.
         TextView phoneView = (TextView) listItemView.findViewById(R.id.phone_text_view);
-        // Check if an image is provided for this word or not
+        // Check if an phone is provided for this place or not
         if (currentGuide.hasPhone()) {
-            // If an image is available, display the provided image based on the resource ID
+            // If an phone is available, display the phone number
             phoneView.setText(currentGuide.getPhone());
             // Make sure the view is visible
             phoneView.setVisibility(View.VISIBLE);
@@ -81,13 +81,13 @@ public class GuideAdapter extends ArrayAdapter<Guide>  {
 
         // Find the TextView in the list_item.xml layout with the ID description_text_view.
         TextView DescriptionTextView = (TextView) listItemView.findViewById(R.id.description_text_view);
-        // Get the default translation from the currentGuide object and set this text on
-        // the default TextView.
+        // Get the description from the currentGuide object and set the first 50 characters of this text on
+        // the description TextView.
         DescriptionTextView.setText(currentGuide.getDescription().substring(0,50)+"...");
 
         // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
-        // Check if an image is provided for this word or not
+        // Check if an image is provided for this place or not
         if (currentGuide.hasImage()) {
             // If an image is available, display the provided image based on the resource ID
             imageView.setImageResource(currentGuide.getImageResourceId());
@@ -98,19 +98,11 @@ public class GuideAdapter extends ArrayAdapter<Guide>  {
             imageView.setVisibility(View.GONE);
         }
 
-        // Set the theme color for the list item
-        View textContainer = listItemView.findViewById(R.id.text_container);
-        // Find the color that the resource ID maps to
-        int color = ContextCompat.getColor(getContext(), mColorResourceId);
-        // Set the background color of the text container View
-        textContainer.setBackgroundColor(color);
-
         // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
         // the ListView.
 
         ImageView playIconView = (ImageView) listItemView.findViewById(R.id.play_icon);
-        playIconView.setImageResource(R.drawable.ic_play_arrow_white_24dp);
-        playIconView.setBackgroundColor(color);
+        playIconView.setImageResource(R.drawable.ic_play_arrow);
 
         return listItemView;
     }

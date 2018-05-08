@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:minHeight="@dimen/list_item_height"
-        android:paddingLeft="16dp">
+        android:paddingLeft="@dimen/layout_padding">
 
         <TextView
             android:id="@+id/title_text_view"
@@ -51,5 +51,5 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="@dimen/list_item_height"
-        android:paddingRight="16dp"/>
+        android:paddingRight="@dimen/layout_padding"/>
 </LinearLayout>

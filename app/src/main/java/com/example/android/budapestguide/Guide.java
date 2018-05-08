@@ -10,7 +10,7 @@
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
+ * See the License of the specific language governing permissions and
  * limitations under the License.
  */
 package com.example.android.budapestguide;
@@ -19,33 +19,33 @@ import android.content.res.Resources;
 
 /**
  * {@link Guide} represents a sight, hotel, restaurant or spa which can be visited by tourists.
- * It contains a title, a description, a phone and an image for that place.
+ * It contains a title, a description, a phone and an image of that place.
  */
 public class Guide {
 
-    /** title for the place */
+    /** Title of the place */
     private String mTitle;
 
-    /** description for the place */
+    /** Description of the place */
     private String mDescription;
 
-    /** Image resource ID for the place */
-    private int mImageResourceId = NO_IMAGE_PROVIDED;
-
-    /** Constant value that represents no image was provided for this place */
+    /** Constant value that represents no image was provided of this place */
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    /** Constant value that represents no phone was provided for this place */
+    /** Image resource ID of the place */
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+
+    /** Constant value that represents no phone was provided of this place */
     private static final String NO_PHONE_PROVIDED = "";
 
-    /** Image resource ID for the place */
+    /** Phone number of the place */
     private String mPhone = NO_PHONE_PROVIDED;
 
     /**
      * Create a new Guide object.
      *
-     * @param title for the place
-     * @param description is the description for the place
+     * @param title of the place
+     * @param description is the description of the place
      */
     public Guide(String title, String description) {
         mTitle = title;
@@ -55,9 +55,9 @@ public class Guide {
     /**
      * Create a new Guide object.
      *
-     * @param title is title for the place
+     * @param title is title of the place
      * @param description is the description of the place
-     * @param imageResourceId is the resource ID for the place
+     * @param imageResourceId is the resource ID of the place
      */
     public Guide(String title, String description, int imageResourceId) {
         mTitle = title;
@@ -68,10 +68,10 @@ public class Guide {
     /**
      * Create a new Guide object.
      *
-     * @param title is title for the place
+     * @param title is title of the place
      * @param description is the description of the place     *
-     * @param phone is the phone for the place
-     * @param imageResourceId is the resource ID for the audio file associated with this place
+     * @param phone is the phone of the place
+     * @param imageResourceId is the resource ID of the audio file associated with this place
      */
     public Guide(String title, String description,String phone, int imageResourceId) {
         mTitle = title;
@@ -81,7 +81,7 @@ public class Guide {
     }
 
     /**
-     * Get the default translation of the place.
+     * Get the Title of the place.
      */
     public String getTitle() {
         return mTitle;
@@ -102,21 +102,21 @@ public class Guide {
     }
 
     /**
-     * Returns whether or not there is an image for this place.
+     * Returns whether or not there is an image of this place.
      */
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 
     /**
-     * Get the phone number for the place.
+     * Get the phone number of the place.
      */
     public String getPhone() {
         return mPhone;
     }
 
     /**
-     * Returns whether or not there is phone for this place.
+     * Returns whether or not there is phone of this place.
      */
     public boolean hasPhone() {
         return mPhone != NO_PHONE_PROVIDED;

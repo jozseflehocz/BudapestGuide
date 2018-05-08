@@ -29,5 +29,42 @@
     <string name="category_spa">Spa</string>
     <string name="item_details">Item Details</string>
     <string name="tel">Tel:</string>
+    <string name="szechenyi_title">Szechenyi Bath</string>
+    <string name="szechenyi_description">Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.</string>
+    <string name="rudas_title">Rudas Thermal Bath</string>
+    <string name="rudas_description">The centerpiece of the bath today, the Turkish bath, was built during the 16th century in the period of the Turkish occupation. Below the 10 m diameter dome, sustained by 8 pillars, there is an octagonal pool. The swimming pool, operating as a therapeutic swimming facility and with a sauna, was built in 1896. The thermal bath has been visited from 1936 o­n exclusively by men.</string>
+    <string name="palatinus_title">Palatinus</string>
+    <string name="palatinus_description">The Open-Air Bath, located o­n the Margit island, in a nature conservation area, was opened as a beach o­n the bank of the Danube in 1919. With the construction of the large pool it was transformed in 1921 into an open-air bath. Owing to its high popularity it had to be expanded, therefore an architectural  project tender was launched in 1937, as a result of which the plans composed by István Janáky were accepted. The current installation was completed o­n the basis of these plans. Its pools are supplied by the thermal springs of the Margit Island.</string>
+    <string name="margaret_island_title">Margaret Island</string>
+    <string name="margaret_island_description">Margaret Island provides a peaceful hideaway from hectic downtown Budapest with large green areas, flowery gardens, old trees, and lots of entertainment.</string>
+    <string name="kobanya_title">Kobanya cellar system</string>
+    <string name="kobanya_description">The Kobanya cellar system or cellar system of Kobanya (IPA: [ˈkøːbaːɲɒ]; in Hungarian: kobanyai pincerendszer, \"cellar system of Kobanya\", or kobanyai alagútrendszer, \"tunnel system of Kobanya\"), sometimes known to non-Hungarians simply as the Kobanya Mine, or the Kobanya Mine, is an extensive network of subterranea, or underground spaces, in the 10th district of Budapest (Kobanya), in Hungary.</string>
+    <string name="bunker_title">Hospital in the Rock Nuclear Bunker Museum</string>
+    <string name="bunker_description">The history of the emergency hospital goes back to World War II, when Castle District was part of the Government Quarter. The caves and tunnels were connected and fortified and used as an air raid shelter. On the orders of the Mayor of Budapest an emergency surgical hospital was also built within the caves beneath Buda Castle Hill. The hospital was actively used during WW II until July 1945 and then during the 1956 Revolution to treat wounded civilians and soldiers.</string>
+    <string name="railway_title">Hungarian Railway Museum</string>
+    <string name="railway_description">The foundation-stone of the Hungarian Railway Museum was laid on 22 November 1999, on the site of the former Budapest North Depot of the Hungarian State Railways (MÁV). The first phase of the project was completed in less than eight months, funded by the Ministry of Transport and Waterways, MÁV and MÁV Nosztalgia Ltd, the heritage division of MÁV. After many months of effort, Europe\'s first interactive railway museum opened on 14 July 2000, displaying over a hundred railway vehicles and equipment of varying ages on a site of over 70,000 m2.</string>
+    <string name="railway_phone">0036(1)111-1111</string>
+    <string name="city_park_title">City Park</string>
+    <string name="city_park_description">The City Park (Hungarian: Varosliget; German: Stadtwäldchen) is a public park close to the centre of Budapest, Hungary. It is a 0.9-by-0.6-mile (1,400 by 970 m) rectangle, with an area of 302 acres (1.2 km2),[1] located in District XIV of Budapest. Its main entrance is at Heroes\' Square (Hosok tere), one of Hungary\'s World Heritage sites.</string>
+    <string name="gellert_hill_title">Gellert Hill</string>
+    <string name="gellert_hill_description">Gellert Hill (Hungarian: Gellert-hegy; German: Blocksberg; Latin: Mons Sancti Gerhardi; Turkish: Gurz İlyas Bayırı) is a 235 m (771 ft) high hill overlooking the Danube in Budapest, Hungary. It is part of the 1st and 11th Districts. Gellert Hill was named after Saint Gerard who was thrown to death from the hill. The famous Hotel Gellert and the Gellert Baths can be found in Gellert Square at the foot of the hill, next to Liberty Bridge.</string>
+    <string name="romai_part_title">Romai part</string>
+    <string name="romai_part_description">The Danube is one of the most defining parts of the breathtaking Budapest view. And yet, we don’t have much contact with the river in our everyday lives. In Budapest, there are no cafes and restaurants by the river like in Rome or Seville as massive traffic took over both river banks. However, there is an area in Óbuda, called Romai-part, a 10-kilometer-long river bank and it’s the best relaxing place in Budapest. The air at Romai-part is filled with the smell of fried fish and langos, just like in the towns around Lake Balaton.</string>
+    <string name="aranyhal_title">Aranyhal Vendeglo</string>
+    <string name="aranyhal_description">In addition to the traditional pastries of Hungarian cuisine, we offer a wide range of regional specialties. We offer varied, different flavors and rich menus every week.</string>
+    <string name="aranyhal_phone">0036(70)338-8086</string>
+    <string name="belvarosi_title">Belvarosi Disznotoros</string>
+    <string name="belvarosi_description">We believe that good food can only be made from good ingredients, therefore their quality is our first priority – be it the frying oil, the meat or the fresh vegetables. It is important for us that our guests leave satisfied and even more important, that they choose us again. We review our restaurants’ permanent menu regularly and improve the recipes, so we can ensure good taste and freshness.</string>
+    <string name="belvarosi_phone">0036(70)602-2775</string>
+    <string name="gundel_title">Gundel Etterem</string>
+    <string name="gundel_description">The name Gundel could rightly stand for the history of modern Hungarian gastronomy and hospitality. Discover the country by its unique taste of food invented by a Bavarian born genius Károly Gundel who tamed the Hungarian cuisine. Gundel is the restaurant where you can find traditional dishes based on original recipes, served in an exceptional ambiance.</string>
+    <string name="gundel_phone">0036(1)889-8100</string>
+    <string name="l_and_a_title"><![CDATA[L & A]]></string>
+    <string name="l_and_a_description"><![CDATA[Located 600 m from Hungarian State Opera House, Apartment L&A offers accommodations in Budapest. Apartment L&A features views of the city and is 2.1 km from Széchenyi Thermal Bath. A dishwasher and an oven are provided in the kitchen and there is a private bathroom with bathrobes and slippers. A flat-screen TV with satellite channels and DVD player is provided.]]></string>
+    <string name="broadway_residence_title">Broadway Residence</string>
+    <string name="broadway_residence_description">Featuring free WiFi and air-conditioning, Broadway Residence is located in Budapest, just 452 m from Hungarian State Opera House. Keleti Railway Station is 2.3 km away. The accommodation is fitted with a satellite flat-screen TV. Some units have a seating and/or dining area. There is also a kitchen, equipped with a dishwasher and oven. A microwave and toaster are also featured, as well as a coffee machine. There is a private bathroom with free toiletries in each unit. Bed linen are available.</string>
+    <string name="parliament_corner_apartment_title">Parliament Corner Apartment</string>
+    <string name="parliament_corner_apartment_description">This property is 1 minute walk from the beach. Parliament Corner Apartment offers accommodations in Budapest, 1.1 km from Hungarian State Opera House and 2.9 km from Keleti Railway Station. The kitchen is fitted with a dishwasher and an oven and there is a private bathroom with slippers, free toiletries and a hair dryer. A flat-screen TV with satellite channels is provided.</string>
+
 
 </resources>

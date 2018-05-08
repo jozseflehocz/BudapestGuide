@@ -24,15 +24,9 @@ public class HotelFragment extends Fragment {
 
         // Create a list of guides
         final ArrayList<Guide> guides = new ArrayList<Guide>();
-        guides.add(new Guide("L & A", "Located 600 m from Hungarian State Opera House, Apartment L&A offers accommodations in Budapest. Apartment L&A features views of the city and is 2.1 km from Széchenyi Thermal Bath.\n" +
-                "\n" +
-                "A dishwasher and an oven are provided in the kitchen and there is a private bathroom with bathrobes and slippers. A flat-screen TV with satellite channels and DVD player is provided.", R.drawable.landa));
-        guides.add(new Guide("Broadway Residence", "Featuring free WiFi and air-conditioning, Broadway Residence is located in Budapest, just 452 m from Hungarian State Opera House. Keleti Railway Station is 2.3 km away.\n" +
-                "\n" +
-                "The accommodation is fitted with a satellite flat-screen TV. Some units have a seating and/or dining area. There is also a kitchen, equipped with a dishwasher and oven. A microwave and toaster are also featured, as well as a coffee machine. There is a private bathroom with free toiletries in each unit. Bed linen are available.", R.drawable.broadwayresidence));
-        guides.add(new Guide("Parliament Corner Apartment", "This property is 1 minute walk from the beach. Parliament Corner Apartment offers accommodations in Budapest, 1.1 km from Hungarian State Opera House and 2.9 km from Keleti Railway Station.\n" +
-                "\n" +
-                "The kitchen is fitted with a dishwasher and an oven and there is a private bathroom with slippers, free toiletries and a hair dryer. A flat-screen TV with satellite channels is provided.", R.drawable.parlaimentcornerapartment));
+        guides.add(new Guide(getString(R.string.l_and_a_title), getString(R.string.l_and_a_description), R.drawable.landa));
+        guides.add(new Guide(getString(R.string.broadway_residence_title), getString(R.string.broadway_residence_description), R.drawable.broadwayresidence));
+        guides.add(new Guide(getString(R.string.parliament_corner_apartment_title), getString(R.string.parliament_corner_apartment_description), R.drawable.parlaimentcornerapartment));
 
         GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.tan_background);
 
