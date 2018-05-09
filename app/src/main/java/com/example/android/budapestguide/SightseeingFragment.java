@@ -5,7 +5,6 @@ import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +39,7 @@ public class SightseeingFragment extends Fragment {
         guides.add(new Guide(getString(R.string.gellert_hill_title), getString(R.string.gellert_hill_description), R.drawable.gellerthegy));
         guides.add(new Guide(getString(R.string.romai_part_title), getString(R.string.romai_part_description), R.drawable.romaipart));
 
-        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.tan_background);
+        GuideAdapter adapter = new GuideAdapter(getActivity(), guides);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

@@ -33,7 +33,7 @@ public class RestaurantFragment extends Fragment {
         guides.add(new Guide(getString(R.string.belvarosi_title), getString(R.string.belvarosi_description), getString(R.string.belvarosi_phone), R.drawable.belvarosidisznotoros));
         guides.add(new Guide(getString(R.string.gundel_title), getString(R.string.gundel_description), getString(R.string.gundel_phone), R.drawable.gundeletterem));
 
-        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.tan_background);
+        GuideAdapter adapter = new GuideAdapter(getActivity(), guides);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

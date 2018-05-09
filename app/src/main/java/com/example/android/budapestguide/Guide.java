@@ -15,8 +15,6 @@
  */
 package com.example.android.budapestguide;
 
-import android.content.res.Resources;
-
 /**
  * {@link Guide} represents a sight, hotel, restaurant or spa which can be visited by tourists.
  * It contains a title, a description, a phone and an image of that place.
@@ -24,22 +22,22 @@ import android.content.res.Resources;
 public class Guide {
 
     /** Title of the place */
-    private String mTitle;
+    private String Title;
 
     /** Description of the place */
-    private String mDescription;
+    private String Description;
 
     /** Constant value that represents no image was provided of this place */
     private static final int NO_IMAGE_PROVIDED = -1;
 
     /** Image resource ID of the place */
-    private int mImageResourceId = NO_IMAGE_PROVIDED;
+    private int ImageResourceId = NO_IMAGE_PROVIDED;
 
     /** Constant value that represents no phone was provided of this place */
     private static final String NO_PHONE_PROVIDED = "";
 
     /** Phone number of the place */
-    private String mPhone = NO_PHONE_PROVIDED;
+    private String Phone = NO_PHONE_PROVIDED;
 
     /**
      * Create a new Guide object.
@@ -48,8 +46,8 @@ public class Guide {
      * @param description is the description of the place
      */
     public Guide(String title, String description) {
-        mTitle = title;
-        mDescription = description;
+        Title = title;
+        Description = description;
     }
 
     /**
@@ -60,9 +58,9 @@ public class Guide {
      * @param imageResourceId is the resource ID of the place
      */
     public Guide(String title, String description, int imageResourceId) {
-        mTitle = title;
-        mDescription = description;
-        mImageResourceId = imageResourceId;
+        Title = title;
+        Description = description;
+        ImageResourceId = imageResourceId;
     }
 
     /**
@@ -74,52 +72,52 @@ public class Guide {
      * @param imageResourceId is the resource ID of the audio file associated with this place
      */
     public Guide(String title, String description,String phone, int imageResourceId) {
-        mTitle = title;
-        mDescription = description;
-        mImageResourceId = imageResourceId;
-        mPhone=phone;
+        Title = title;
+        Description = description;
+        ImageResourceId = imageResourceId;
+        Phone =phone;
     }
 
     /**
      * Get the Title of the place.
      */
     public String getTitle() {
-        return mTitle;
+        return Title;
     }
 
     /**
      * Get the description of the place.
      */
     public String getDescription() {
-        return mDescription;
+        return Description;
     }
 
     /**
      * Return the image resource ID of the place.
      */
     public int getImageResourceId() {
-        return mImageResourceId;
+        return ImageResourceId;
     }
 
     /**
      * Returns whether or not there is an image of this place.
      */
     public boolean hasImage() {
-        return mImageResourceId != NO_IMAGE_PROVIDED;
+        return ImageResourceId != NO_IMAGE_PROVIDED;
     }
 
     /**
      * Get the phone number of the place.
      */
     public String getPhone() {
-        return mPhone;
+        return Phone;
     }
 
     /**
      * Returns whether or not there is phone of this place.
      */
     public boolean hasPhone() {
-        return mPhone != NO_PHONE_PROVIDED;
+        return Phone != NO_PHONE_PROVIDED;
     }
 
 }

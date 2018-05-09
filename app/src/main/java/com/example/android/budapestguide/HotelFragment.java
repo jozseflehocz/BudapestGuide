@@ -28,7 +28,7 @@ public class HotelFragment extends Fragment {
         guides.add(new Guide(getString(R.string.broadway_residence_title), getString(R.string.broadway_residence_description), R.drawable.broadwayresidence));
         guides.add(new Guide(getString(R.string.parliament_corner_apartment_title), getString(R.string.parliament_corner_apartment_description), R.drawable.parlaimentcornerapartment));
 
-        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.tan_background);
+        GuideAdapter adapter = new GuideAdapter(getActivity(), guides);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

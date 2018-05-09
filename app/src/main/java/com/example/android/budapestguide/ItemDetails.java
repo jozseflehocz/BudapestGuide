@@ -17,10 +17,8 @@ public class ItemDetails extends AppCompatActivity {
     public void onBackPressed(){
         FragmentManager fm = getFragmentManager();
         if (fm.getBackStackEntryCount() > 0) {
-            //Log.i("ItemDetails", "popping backstack");
             fm.popBackStack();
         } else {
-            //Log.i("ItemDetails", "nothing on backstack, calling super");
             super.onBackPressed();
         }
     }

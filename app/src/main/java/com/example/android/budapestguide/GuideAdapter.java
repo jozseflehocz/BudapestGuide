@@ -16,7 +16,6 @@
 package com.example.android.budapestguide;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,19 +31,14 @@ import java.util.ArrayList;
  */
 public class GuideAdapter extends ArrayAdapter<Guide>  {
 
-    /** Resource ID for the background color for this list of words */
-    private int mColorResourceId;
-
     /**
      * Create a new {@link GuideAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
      * @param guides is the list of {@link Guide}s to be displayed.
-     * @param colorResourceId is the resource ID for the background color for this list of guides
-     */
-    public GuideAdapter(Context context, ArrayList<Guide> guides, int colorResourceId) {
+     *      */
+    public GuideAdapter(Context context, ArrayList<Guide> guides) {
         super(context, 0, guides);
-        mColorResourceId = colorResourceId;
     }
 
     @Override

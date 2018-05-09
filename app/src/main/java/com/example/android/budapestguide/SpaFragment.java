@@ -32,7 +32,7 @@ public class SpaFragment extends Fragment {
         guides.add(new Guide(getString(R.string.rudas_title), getString(R.string.rudas_description), R.drawable.rudas));
         guides.add(new Guide(getString(R.string.palatinus_title), getString(R.string.palatinus_description), R.drawable.palatinus));
 
-        GuideAdapter adapter = new GuideAdapter(getActivity(), guides, R.color.tan_background);
+        GuideAdapter adapter = new GuideAdapter(getActivity(), guides);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
